@@ -1,0 +1,80 @@
+body
+{
+	background-color:white;
+	color:black;
+	margin: 0px;
+}
+
+* 
+{
+	box-sizing: border-box;
+}
+
+.title
+{
+	text-align:center;
+}
+
+.day-night
+{
+	height:30px;
+	width:30px;
+	float:right;
+	margin:5px;
+}
+
+.sidenav
+{
+	width: 16%; 
+	float: left;
+	background-color: #111;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.main
+{
+	width: 84%;
+	float: left; 
+}
+
+.main-body{
+	padding-left: 40px;
+	padding-top: 50px;
+}
+
+.sidenav a
+{
+	padding: 6px 6px 6px 32px;
+	text-decoration: none;
+	color: #818181;
+	display: block;
+}
+
+.sidenav p
+{
+	padding: 6px 6px 6px 32px;
+	/*margin: 0;*/
+	/*uncomment above to remove spacing for disabled(turned into <p> tags) navbar items */
+	text-decoration: none;
+	color: #818181;
+	display: block;
+}
+
+.projects
+{
+	font-size: 20px;
+}
+
+.main-sect
+{
+	font-size:30px;
+	padding-bottom:20px;
+}
+
+.sidenav a:hover
+{
+	color: #f1f1f1;
+}
+
+
