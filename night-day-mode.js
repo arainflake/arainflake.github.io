@@ -1,6 +1,6 @@
 function nightDayMode()
 {
-	var x = document.getElementById("day-night-png");	
+	var x = document.getElementById("day-night-svg");	
 	var y = document.getElementById("day-css");
 	var z = document.getElementById("night-css");
 	
