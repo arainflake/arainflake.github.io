@@ -15,7 +15,7 @@ var sidenavProjects = [
 //python generated section between '///'
 
 var y = window.location.pathname;
-var w = y.substring(y.lastIndexOf("/") + 1, y.length);
+var w = document.URL;
 var z;
 
 for (x = 0; x < sidenavMainSect.length; x++){
@@ -24,7 +24,7 @@ for (x = 0; x < sidenavMainSect.length; x++){
 		document.getElementById("mainSect").insertAdjacentHTML("beforeend", z);
 		continue;
 	}
-	document.getElementById("mainSect").insertAdjacentHTML("beforeend", (w == "index.html") ? sidenavMainSect[x] : sidenavMainSect[x].replace('"./', '"../'));
+	document.getElementById("mainSect").insertAdjacentHTML("beforeend", (w == "/") ? sidenavMainSect[x] : sidenavMainSect[x].replace('"./', '"../'));
 }
 for (x = 0; x < sidenavProjects.length; x++){
 	if (w == sidenavProjects[x].match(w)){
@@ -32,7 +32,7 @@ for (x = 0; x < sidenavProjects.length; x++){
 		document.getElementById("projects").insertAdjacentHTML("beforeend", z);
 		continue;
 	} 
-	document.getElementById("projects").insertAdjacentHTML("beforeend", (w == "index.html") ? sidenavProjects[x] : sidenavProjects[x].replace('"./', '"../')); 
+	document.getElementById("projects").insertAdjacentHTML("beforeend", (w == "/") ? sidenavProjects[x] : sidenavProjects[x].replace('"./', '"../')); 
 }
 document.getElementById("sidenav").style.minHeight = document.documentElement.clientHeight.toString() + "px";
 
