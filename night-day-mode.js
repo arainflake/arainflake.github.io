@@ -7,14 +7,14 @@ function nightDayMode()
 	if (x.src.match("sun.svg") == "sun.svg")
 	{
 		//night mode
-		x.src = "./moon.svg";
+		x.src = "/moon.svg";
 		y.disabled = false;
 		z.disabled = true;
 	}
 	else
 	{
 		//day mode
-		x.src = "./sun.svg";
+		x.src = "/sun.svg";
 		y.disabled = true;
 		z.disabled = false; 
 	}
