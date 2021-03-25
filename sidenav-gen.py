@@ -47,7 +47,7 @@ ham = f.read().split("///")
 ham[1] = (
 "///\n" +
 "var sidenavMainSect = [\n" +
-"'<a href=\"../index.html\">Home</a>',\n" +
+"'<a href=\"../\">Home</a>',\n" +
 mainSect +
 "];\n" +
 "\n" +
