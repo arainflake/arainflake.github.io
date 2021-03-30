@@ -34,7 +34,7 @@ for (x = 0; x < sidenavMainSect.length; x++){
 }
 for (x = 0; x < sidenavProjects.length; x++){
 	y = sidenavProjects[x].substring(sidenavProjects.indexOf("\"") + 1, sidenavProjects[x].lastIndexOf("\""));
-	if (w != "/" && w == y){
+	if (w != "/" && w == sidenavProjects[x].match(w)){
 		z = "<p>" + sidenavProjects[x].substring(sidenavProjects[x].indexOf(">") + 1, sidenavProjects[x].lastIndexOf("<")) + "</p>";
 		document.getElementById("projects").insertAdjacentHTML("beforeend", z);
 	} else{
