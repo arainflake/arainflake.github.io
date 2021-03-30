@@ -16,8 +16,8 @@ var sidenavProjects = [
 ///
 //python generated section between '///'
 
-var y = window.location.pathname;
-var w = document.URL;
+var w = window.location.pathname;
+
 var z;
 
 for (x = 0; x < sidenavMainSect.length; x++){
