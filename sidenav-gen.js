@@ -1,15 +1,17 @@
+
 //python generated section between '///'
 ///
 var sidenavMainSect = [
-'<a href="../">Home</a>',
-'<a href="./Links/Links.html">Links</a>',
-'<a href="./Notes/Notes.html">Notes</a>',
-'<a href="./Videos/Videos.html">Videos</a>'
+'<a href="/index.html">Home</a>',
+'<a href="/Links/index.html">Links</a>',
+'<a href="/Bookmarks/index.html">Bookmarks</a>',
+'<a href="/Notes/index.html">Notes</a>',
+'<a href="/Videos/index.html">Videos</a>'
 ];
 
 var sidenavProjects = [
-'<a href="./project1/project1.html">project1</a>',
-'<a href="./project2/project2.html">project2</a>'
+'<a href="/project1/index.html">project1</a>',
+'<a href="/project2/index.html">project2</a>'
 ];
 ///
 //python generated section between '///'

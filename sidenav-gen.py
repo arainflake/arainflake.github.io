@@ -1,5 +1,6 @@
 from subprocess import check_output
 
+#
 files = str(check_output(["ls","-go"])).split("\\n")
 files.pop(0)
 files.pop(len(files) - 1)
@@ -25,6 +26,7 @@ for x in parts1:
     if x[0].find("d") != -1:
         parts2.append(x[1])
 
+#uppercase folders are added to the main section, lowercase to the other
 parts1.clear()
 for x in parts2:
     if x[0].isupper() == True:
@@ -32,18 +34,21 @@ for x in parts2:
     else:
         parts3.append(x)
 
+#builds the respective href tags
 for x in parts1:
-    mainSect += "'<a href=\"./" + x + "/" + x + ".html\">" + x + "</a>',\n"
+    mainSect += "'<a href=\"/" + x + "/" + x + ".html\">" + x + "</a>',\n"
 
 for x in parts3:
-    projects += "'<a href=\"./" + x + "/" + x + ".html\">" + x + "</a>',\n"
+    projects += "'<a href=\"/" + x + "/" + x + ".html\">" + x + "</a>',\n"
 
 mainSect = mainSect.rstrip(",\n") + "\n"
 projects = projects.rstrip(",\n") + "\n"
 
+#opens the js file, splits into 3 parts; before the /// block, inside, and after the block
 f = open("sidenav-gen.js", "r")
 ham = f.read().split("///")
 
+#index[1] is inside the block. rewrite with updated values
 ham[1] = (
 "///\n" +
 "var sidenavMainSect = [\n" +
