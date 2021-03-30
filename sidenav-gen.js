@@ -22,10 +22,10 @@ var z;
 
 for (x = 0; x < sidenavMainSect.length; x++){
 	y = sidenavMainSect[x].substring(sidenavMainSect.indexOf("\"") + 1, sidenavMainSect[x].lastIndexOf("\""));
-	if (w == "/" && x == 0){
+	if ((w == "/" || w == "/index.html") && x == 0){
 		z = "<p>" + sidenavMainSect[x].substring(sidenavMainSect[x].indexOf(">") + 1, sidenavMainSect[x].lastIndexOf("<")) + "</p>";
 		document.getElementById("mainSect").insertAdjacentHTML("beforeend", z);
-	} else if (w != "/" && w == y){
+	} else if (w != "/" && w != "/index.html" && w == y){
 		z = "<p>" + sidenavMainSect[x].substring(sidenavMainSect[x].indexOf(">") + 1, sidenavMainSect[x].lastIndexOf("<")) + "</p>";
 		document.getElementById("mainSect").insertAdjacentHTML("beforeend", z);
 	} else {
