@@ -17,15 +17,18 @@ var sidenavProjects = [
 //python generated section between '///'
 
 var w = window.location.pathname;
+if (w == "/index.html"){
+	w = "/";
+}
 //var w = document.URL;
 var z;
 
 for (x = 0; x < sidenavMainSect.length; x++){
 	y = sidenavMainSect[x].substring(sidenavMainSect.indexOf("\"") + 1, sidenavMainSect[x].lastIndexOf("\""));
-	if ((w == "/" || w == "/index.html") && x == 0){
+	if (w == "/" && x == 0){
 		z = "<p>" + sidenavMainSect[x].substring(sidenavMainSect[x].indexOf(">") + 1, sidenavMainSect[x].lastIndexOf("<")) + "</p>";
 		document.getElementById("mainSect").insertAdjacentHTML("beforeend", z);
-	} else if (w != "/" && w != "/index.html" && w == y){
+	} else if (w != "/" && w == y){
 		z = "<p>" + sidenavMainSect[x].substring(sidenavMainSect[x].indexOf(">") + 1, sidenavMainSect[x].lastIndexOf("<")) + "</p>";
 		document.getElementById("mainSect").insertAdjacentHTML("beforeend", z);
 	} else {
@@ -34,7 +37,7 @@ for (x = 0; x < sidenavMainSect.length; x++){
 }
 for (x = 0; x < sidenavProjects.length; x++){
 	y = sidenavProjects[x].substring(sidenavProjects.indexOf("\"") + 1, sidenavProjects[x].lastIndexOf("\""));
-	if (w != "/" && w != "/index.html" && w == y){
+	if (w != "/" && w == y){
 		z = "<p>" + sidenavProjects[x].substring(sidenavProjects[x].indexOf(">") + 1, sidenavProjects[x].lastIndexOf("<")) + "</p>";
 		document.getElementById("projects").insertAdjacentHTML("beforeend", z);
 	} else{
