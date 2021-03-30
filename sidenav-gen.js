@@ -21,10 +21,11 @@ var w = window.location.pathname;
 var z;
 
 for (x = 0; x < sidenavMainSect.length; x++){
+	y = sidenavMainSect[x].substring(sidenavMainSect.indexOf("\"") + 1, sidenavMainSect[x].lastIndexOf("\""));
 	if (w == "/" && x == 0){
 		z = "<p>" + sidenavMainSect[x].substring(sidenavMainSect[x].indexOf(">") + 1, sidenavMainSect[x].lastIndexOf("<")) + "</p>";
 		document.getElementById("mainSect").insertAdjacentHTML("beforeend", z);
-	} else if (w != "/" && w == sidenavMainSect[x].match(w)){
+	} else if (w != "/" && w == y){
 		z = "<p>" + sidenavMainSect[x].substring(sidenavMainSect[x].indexOf(">") + 1, sidenavMainSect[x].lastIndexOf("<")) + "</p>";
 		document.getElementById("mainSect").insertAdjacentHTML("beforeend", z);
 	} else {
@@ -32,7 +33,8 @@ for (x = 0; x < sidenavMainSect.length; x++){
 	}
 }
 for (x = 0; x < sidenavProjects.length; x++){
-	if (w != "/" && w == sidenavProjects[x].match(w)){
+	y = sidenavProjects[x].substring(sidenavProjects.indexOf("\"") + 1, sidenavProjects[x].lastIndexOf("\""));
+	if (w != "/" && w == y){
 		z = "<p>" + sidenavProjects[x].substring(sidenavProjects[x].indexOf(">") + 1, sidenavProjects[x].lastIndexOf("<")) + "</p>";
 		document.getElementById("projects").insertAdjacentHTML("beforeend", z);
 	} else{
