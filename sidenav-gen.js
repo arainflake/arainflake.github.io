@@ -24,8 +24,7 @@ for (x = 0; x < sidenavMainSect.length; x++){
 	if (w == "" && x == 0){
 		z = "<p>" + sidenavMainSect[x].substring(sidenavMainSect[x].indexOf(">") + 1, sidenavMainSect[x].lastIndexOf("<")) + "</p>";
 		document.getElementById("mainSect").insertAdjacentHTML("beforeend", z);
-	}
-	else if (w != "" && w == sidenavMainSect[x].match(w)){
+	} else if (w != "" && w == sidenavMainSect[x].match(w)){
 		z = "<p>" + sidenavMainSect[x].substring(sidenavMainSect[x].indexOf(">") + 1, sidenavMainSect[x].lastIndexOf("<")) + "</p>";
 		document.getElementById("mainSect").insertAdjacentHTML("beforeend", z);
 		continue;
@@ -36,8 +35,7 @@ for (x = 0; x < sidenavProjects.length; x++){
 	if (w == "" && x == 0){
 		z = "<p>" + sidenavProjects[x].substring(sidenavProjects[x].indexOf(">") + 1, sidenavProjects[x].lastIndexOf("<")) + "</p>";
 		document.getElementById("projects").insertAdjacentHTML("beforeend", z);
-	}
-	if (w != "" && w == sidenavProjects[x].match(w)){
+	} else if (w != "" && w == sidenavProjects[x].match(w)){
 		z = "<p>" + sidenavProjects[x].substring(sidenavProjects[x].indexOf(">") + 1, sidenavProjects[x].lastIndexOf("<")) + "</p>";
 		document.getElementById("projects").insertAdjacentHTML("beforeend", z);
 		continue;
