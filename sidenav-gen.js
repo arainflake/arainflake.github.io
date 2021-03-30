@@ -17,24 +17,32 @@ var sidenavProjects = [
 //python generated section between '///'
 
 var w = window.location.pathname;
-
+//var w = document.URL;
 var z;
 
 for (x = 0; x < sidenavMainSect.length; x++){
-	if (w == sidenavMainSect[x].match(w)){
+	if (w == "" && x == 0){
+		z = "<p>" + sidenavMainSect[x].substring(sidenavMainSect[x].indexOf(">") + 1, sidenavMainSect[x].lastIndexOf("<")) + "</p>";
+		document.getElementById("mainSect").insertAdjacentHTML("beforeend", z);
+	}
+	else if (w != "" && w == sidenavMainSect[x].match(w)){
 		z = "<p>" + sidenavMainSect[x].substring(sidenavMainSect[x].indexOf(">") + 1, sidenavMainSect[x].lastIndexOf("<")) + "</p>";
 		document.getElementById("mainSect").insertAdjacentHTML("beforeend", z);
 		continue;
 	}
-	document.getElementById("mainSect").insertAdjacentHTML("beforeend", (w == "") ? sidenavMainSect[x] : sidenavMainSect[x].replace('"./', '"../'));
+	document.getElementById("mainSect").insertAdjacentHTML("beforeend",sidenavMainSect[x]);
 }
 for (x = 0; x < sidenavProjects.length; x++){
-	if (w == sidenavProjects[x].match(w)){
+	if (w == "" && x == 0){
+		z = "<p>" + sidenavProjects[x].substring(sidenavProjects[x].indexOf(">") + 1, sidenavProjects[x].lastIndexOf("<")) + "</p>";
+		document.getElementById("projects").insertAdjacentHTML("beforeend", z);
+	}
+	if (w != "" && w == sidenavProjects[x].match(w)){
 		z = "<p>" + sidenavProjects[x].substring(sidenavProjects[x].indexOf(">") + 1, sidenavProjects[x].lastIndexOf("<")) + "</p>";
 		document.getElementById("projects").insertAdjacentHTML("beforeend", z);
 		continue;
 	} 
-	document.getElementById("projects").insertAdjacentHTML("beforeend", (w == "") ? sidenavProjects[x] : sidenavProjects[x].replace('"./', '"../')); 
+	document.getElementById("projects").insertAdjacentHTML("beforeend",sidenavProjects[x]); 
 }
 document.getElementById("sidenav").style.minHeight = document.documentElement.clientHeight.toString() + "px";
 
