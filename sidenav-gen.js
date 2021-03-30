@@ -27,9 +27,9 @@ for (x = 0; x < sidenavMainSect.length; x++){
 	} else if (w != "" && w == sidenavMainSect[x].match(w)){
 		z = "<p>" + sidenavMainSect[x].substring(sidenavMainSect[x].indexOf(">") + 1, sidenavMainSect[x].lastIndexOf("<")) + "</p>";
 		document.getElementById("mainSect").insertAdjacentHTML("beforeend", z);
-		continue;
+	} else {
+		document.getElementById("mainSect").insertAdjacentHTML("beforeend",sidenavMainSect[x]);
 	}
-	document.getElementById("mainSect").insertAdjacentHTML("beforeend",sidenavMainSect[x]);
 }
 for (x = 0; x < sidenavProjects.length; x++){
 	if (w == "" && x == 0){
@@ -38,9 +38,9 @@ for (x = 0; x < sidenavProjects.length; x++){
 	} else if (w != "" && w == sidenavProjects[x].match(w)){
 		z = "<p>" + sidenavProjects[x].substring(sidenavProjects[x].indexOf(">") + 1, sidenavProjects[x].lastIndexOf("<")) + "</p>";
 		document.getElementById("projects").insertAdjacentHTML("beforeend", z);
-		continue;
-	} 
-	document.getElementById("projects").insertAdjacentHTML("beforeend",sidenavProjects[x]); 
+	} else{
+		document.getElementById("projects").insertAdjacentHTML("beforeend",sidenavProjects[x]);
+	}
 }
 document.getElementById("sidenav").style.minHeight = document.documentElement.clientHeight.toString() + "px";
 
