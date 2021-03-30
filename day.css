@@ -54,7 +54,7 @@ body
 .sidenav p
 {
 	padding: 6px 6px 6px 32px;
-	/*margin: 0;*/
+	margin: 0;
 	/*uncomment above to remove spacing for disabled(turned into <p> tags) navbar items */
 	text-decoration: none;
 	color: #b200ff;
