@@ -10,7 +10,6 @@ var sidenavMainSect = [
 ];
 
 var sidenavProjects = [
-'<a href="/giblets/">giblets</a>',
 '<a href="/project1/">project1</a>',
 '<a href="/project2/">project2</a>'
 ];
