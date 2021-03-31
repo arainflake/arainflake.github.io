@@ -36,10 +36,10 @@ for x in parts2:
 
 #builds the respective href tags
 for x in parts1:
-    mainSect += "'<a href=\"/" + x + "/" + x + ".html\">" + x + "</a>',\n"
+    mainSect += "'<a href=\"/" + x + "/\">" + x + "</a>',\n"
 
 for x in parts3:
-    projects += "'<a href=\"/" + x + "/" + x + ".html\">" + x + "</a>',\n"
+    projects += "'<a href=\"/" + x + "/\">" + x + "</a>',\n"
 
 mainSect = mainSect.rstrip(",\n") + "\n"
 projects = projects.rstrip(",\n") + "\n"
