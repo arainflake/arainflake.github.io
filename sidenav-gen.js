@@ -3,10 +3,10 @@
 ///
 var sidenavMainSect = [
 '<a href="/">Home</a>',
-'<a href="/bookmarksm/">bookmarks</a>',
-'<a href="/linksm/">links</a>',
-'<a href="/notesm/">notes</a>',
-'<a href="/videosm/">videos</a>'
+'<a href="/bookmarksm/">Bookmarks</a>',
+'<a href="/linksm/">Links</a>',
+'<a href="/notesm/">Notes</a>',
+'<a href="/videosm/">Videos</a>'
 ];
 
 var sidenavProjects = [
