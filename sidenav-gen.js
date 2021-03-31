@@ -1,20 +1,21 @@
 
-//python generated section between '///'
+//python generated section
 ///
 var sidenavMainSect = [
 '<a href="/">Home</a>',
-'<a href="/Links/">Links</a>',
-'<a href="/Bookmarks/">Bookmarks</a>',
-'<a href="/Notes/">Notes</a>',
-'<a href="/Videos/">Videos</a>'
+'<a href="/bookmarksm/">bookmarks</a>',
+'<a href="/linksm/">links</a>',
+'<a href="/notesm/">notes</a>',
+'<a href="/videosm/">videos</a>'
 ];
 
 var sidenavProjects = [
+'<a href="/giblets/">giblets</a>',
 '<a href="/project1/">project1</a>',
 '<a href="/project2/">project2</a>'
 ];
 ///
-//python generated section between '///'
+//python generated section
 
 var w = window.location.pathname;
 if (w == "/index.html"){
