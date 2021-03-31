@@ -1,6 +1,5 @@
 from subprocess import check_output
 
-#
 files = str(check_output(["ls","-go"])).split("\\n")
 files.pop(0)
 files.pop(len(files) - 1)
@@ -11,32 +10,22 @@ parts3 = []
 mainSect = ""
 projects = ""
 
+#takes the output from ls and finds which files are directories
 for x in files:
-    parts1.append(x.split(" "))
-
-for x in parts1:
-    parts2.append(x[0] + " " + x[-1])
-
-parts1.clear()
-for x in parts2:
-    parts1.append(x.split(" "))
-
-parts2.clear()
-for x in parts1:
-    if x[0].find("d") != -1:
-        parts2.append(x[1])
+    if (x.startswith("d")):
+        parts2.append(x.split(" ")[-1])
 
 #uppercase folders are added to the main section, lowercase to the other
 parts1.clear()
 for x in parts2:
-    if x[0].isupper() == True:
+    if x.endswith("m"):
         parts1.append(x)
     else:
         parts3.append(x)
 
-#builds the respective href tags
+#builds the respective href tags, excluding the m on the end of the main section directories for the href name
 for x in parts1:
-    mainSect += "'<a href=\"/" + x + "/\">" + x + "</a>',\n"
+    mainSect += "'<a href=\"/" + x + "/\">" + x[:-1] + "</a>',\n"
 
 for x in parts3:
     projects += "'<a href=\"/" + x + "/\">" + x + "</a>',\n"
@@ -52,7 +41,7 @@ ham = f.read().split("///")
 ham[1] = (
 "///\n" +
 "var sidenavMainSect = [\n" +
-"'<a href=\"../\">Home</a>',\n" +
+"'<a href=\"/\">Home</a>',\n" +
 mainSect +
 "];\n" +
 "\n" +
