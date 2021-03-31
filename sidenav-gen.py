@@ -25,7 +25,7 @@ for x in parts2:
 
 #builds the respective href tags, excluding the m on the end of the main section directories for the href name
 for x in parts1:
-    mainSect += "'<a href=\"/" + x + "/\">" + x[:-1] + "</a>',\n"
+    mainSect += "'<a href=\"/" + x + "/\">" + x[:-1].capitalize() + "</a>',\n"
 
 for x in parts3:
     projects += "'<a href=\"/" + x + "/\">" + x + "</a>',\n"
