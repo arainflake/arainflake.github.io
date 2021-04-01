@@ -6,7 +6,7 @@ var sidenavMainSect = [
 '<a href="/bookmarksm/">Bookmarks</a>',
 '<a href="/linksm/">Links</a>',
 '<a href="/notesm/">Notes</a>',
-'<a href="/videosm/">Videos</a>'
+'<a href="/donatem/">Donate</a>'
 ];
 
 var sidenavProjects = [
