@@ -73,6 +73,11 @@ body
 	font-family: 'liberation_serif', 'Times New Roman', 'Georgia', Serif
 }
 
+a
+{
+	color: LightBlue;
+}
+
 * 
 {
 	box-sizing: border-box;
